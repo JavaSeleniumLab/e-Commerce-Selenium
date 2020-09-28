@@ -49,6 +49,9 @@ public class basePage {
     }
 
     //
+    public String getValue(){
+        return DriverWrapper.getDriver().getTitle(); 
+    }
 
 
 }

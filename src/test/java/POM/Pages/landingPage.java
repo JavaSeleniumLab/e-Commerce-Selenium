@@ -8,6 +8,8 @@ public class landingPage extends basePage {
         clickThis(headerSignIn);
     }
 
-
+    public void getAttr(){
+        getAttribute(headerSignIn, "href");
+    }
 }
 
