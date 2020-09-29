@@ -1,29 +1,31 @@
 package TestCases;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import POM.Pages.homePage;
+import POM.Pages.landingPage;
+import WebDriverPakg.DriverWrapper;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class verifySignIn {
+public class verifySignIn extends landingPage{
 
 
     @Test
-    public void TestCase (){
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\golde\\Downloads\\chromedriver_win32\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://clubs3qa1.scholastic.com/");
+    public void TestCase () throws InterruptedException {
 
+        DriverWrapper.initDriver();
+        Thread.sleep(60000);
+        findHeaderSignIn();
+        clickHeaderSignIn();
+        enterEmail("mytestingworldlife@gmail.com");
+        enterPassword("Alina2020");
+        clickButton();
 
-        String title= driver.getTitle();
-        System.out.println(title);
+        homePage h1= new homePage();
+        h1.confirmUserName();
 
+        Assert.assertTrue(h1.isSalutationD(), "Salutation isn't displayed");
 
-
-
-
-
-
-
+        getDriver().quit();
 
     }
 
