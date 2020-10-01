@@ -104,4 +104,17 @@ public class basePage extends DriverWrapper {
         WebElement webFrameLocator=findWebElement(locator);
         getDriver().switchTo().frame(webFrameLocator);
     }
+
+    public void pickAutoSuggest (By locator, String input){
+        List<WebElement> allList= findWebElements(locator);
+        for (WebElement suggestion: allList){
+            if (suggestion.getText().equalsIgnoreCase(input))
+                suggestion.click();
+                break;
+        }
+
+
+
+
+    }
 }
