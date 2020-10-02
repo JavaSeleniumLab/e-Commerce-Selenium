@@ -58,7 +58,7 @@ public class pickCalendarDate  {
 
         driver.findElement(By.id("qf-0q-localised-check-in")).click();
 
-        By locatorDate = By.xpath("(//div[@class='widget-datepicker-bd'])[2]//td[not(contains(@class,'datepicker-empty'))]//a");
+        By locatorDate = By.xpath("(//div[@class='widget-datepicker-bd'])[1]//td[not(contains(@class,'datepicker-empty'))]//a");
 
         List<WebElement> dateElement = driver.findElements(locatorDate);
         for (WebElement date: dateElement) {
@@ -73,7 +73,7 @@ public class pickCalendarDate  {
         driver.findElement(By.xpath("//label[@data-input='qf-0q-localised-check-out']")).click();
 
         String checkOut ="25";
-        By locatorDate2 = By.xpath("(//div[@class='widget-datepicker-bd'])[2]//td[not(contains(@class,'datepicker-empty'))]//a");
+        By locatorDate2 = By.xpath("(//div[@class='widget-datepicker-bd'])[1]//td[not(contains(@class,'datepicker-empty'))]//a");
 
         List<WebElement> dateElement2 = driver.findElements(locatorDate2);
         for (WebElement date2 : dateElement2){

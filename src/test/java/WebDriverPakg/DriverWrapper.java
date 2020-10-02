@@ -12,7 +12,8 @@ public class DriverWrapper {
     public static void initDriver() {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\golde\\Downloads\\chromedriver_win32\\chromedriver.exe");
         driver = new ChromeDriver();
-        driver.get("https://clubs3qa1.scholastic.com/");
+        //driver.get("https://clubs3qa1.scholastic.com/");
+        driver.get("https://hotels.com/");
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
