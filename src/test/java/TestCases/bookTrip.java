@@ -1,5 +1,6 @@
 package TestCases;
 
+import POM.Pages.homePageHotels;
 import POM.Pages.landingPageHotels;
 import WebDriverPakg.DriverWrapper;
 import org.testng.Assert;
@@ -24,10 +25,27 @@ public class bookTrip extends landingPageHotels {
         clickOnOutDay();
         hoverCheckOut();
 
-        String nights= numberOfNights();
+        String nights = numberOfNights();
         Assert.assertEquals(nights, "15", "The number displayed isn't correct");
 
         clickSearchButton();
+
+
+
+        homePageHotels h1 = new homePageHotels();
+        h1.showFifthOption();
+
+        String price = h1.getPriceOfFifthLocation();
+        System.out.println(price);
+
+        Thread.sleep(5000);
+       // WebDriverWait eWait = new WebDriverWait(getDriver(), 10);
+        h1.clickOnChooseRoom();
+        String price2 = h1.getRoomPrice();
+
+        Assert.assertEquals(price, price2, "Prices don't match");
+
+        Assert.assertTrue(h1.isReserveDisplayed());
 
     }
 
