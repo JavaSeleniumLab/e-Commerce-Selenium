@@ -2,7 +2,6 @@ package TestCases;
 
 import POM.Pages.homePageHotels;
 import POM.Pages.landingPageHotels;
-import WebDriverPakg.DriverWrapper;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -11,7 +10,6 @@ public class bookTrip extends landingPageHotels {
     @Test
     public void chooseAutoSuggestion() throws InterruptedException {
 
-        DriverWrapper.initDriver();
         typeDestination("puerto");
         Thread.sleep(10000);
 
