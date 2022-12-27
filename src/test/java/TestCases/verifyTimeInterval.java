@@ -18,6 +18,7 @@ public class verifyTimeInterval {
 
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\golde\\Downloads\\chromedriver_win32\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
+       // driver.get("http://www.google.com/");
         String url = "https://darksky.net/";
         driver.get(url);
 

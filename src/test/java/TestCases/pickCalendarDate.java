@@ -185,6 +185,7 @@ public class pickCalendarDate {
 
         driver.findElement(By.id("qf-0q-localised-check-in")).click();
 
+
         By locatorDate = By.xpath("(//div[@class='widget-datepicker-bd'])[1]//td[not(contains(@class,'datepicker-empty'))]//a");
 
         List<WebElement> dateElement = driver.findElements(locatorDate);
