@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name = "ScholasticQASuite" >
+
+    <parameter name="browserName" value="sauce"></parameter>
+    <parameter name="url" value="https://clubs3qa1.scholastic.com"></parameter>
+
+    <test name="Login">
+
+        <classes>
+            <class name="TestCases.verifySignIn"></class>
+        </classes>
+    </test>
+
+    <test name="Sign Up">
+        <classes>
+            <class name="TestCases.verifySignInInvalid"></class>
+        </classes>
+    </test>
+
+
+</suite>
