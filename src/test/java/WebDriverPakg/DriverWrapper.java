@@ -27,14 +27,12 @@ public class DriverWrapper {
     @Parameters({"url", "browserName"})
     @BeforeMethod
 
-    public static void initDriver(@Optional("https://clubs3qa1.scholastic.com") String url, @Optional("chrome") String browserName) {
+    public static void initDriver(@Optional("https://tutorialsninja.com/demo/index.php?route=common/home") String url, @Optional("chrome") String browserName) {
 
         switch (browserName.toLowerCase()) {
             case "chrome":
             System.setProperty("webdriver.chrome.driver", "C:\\Users\\golde\\Downloads\\chromedriver_win32\\chromedriver.exe");
             driver = new ChromeDriver();
-            //driver.get("https://hotels.com/");
-            //driver.get("https://darksky.net/");
                 break;
             case"sauce":
                 DesiredCapabilities ds = DesiredCapabilities.chrome();

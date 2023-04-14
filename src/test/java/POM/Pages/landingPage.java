@@ -11,12 +11,15 @@ public class landingPage extends basePage {
 
     @Step("Searching for Upper Sign In locator")
     public void findHeaderSignIn (){findWebElement(headerSignIn);}
+
     @Step("Clicking on Upper Sign In tab")
     public void clickHeaderSignIn() {clickThis(headerSignIn);}
+
     @Step("Entering user Email address {0}")
     public void enterEmail(String userEmail){
         type(enterEmail, userEmail);
     }
+
     @Step("Entering the password {0}")
     public void enterPassword (String password){
         type(enterPassword, password);
