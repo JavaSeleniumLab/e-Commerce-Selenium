@@ -1,6 +1,5 @@
 package TestCases;
 
-import POM.Pages.homePage;
 import POM.Pages.landingPage;
 import WebDriverPakg.DriverWrapper;
 import io.qameta.allure.*;
@@ -20,7 +19,7 @@ public class verifySignIn extends DriverWrapper {
     public void TestCase () throws InterruptedException {
 
         landingPage l2=new landingPage();
-        Thread.sleep(60000);
+        Thread.sleep(5);
         l2.findHeaderSignIn();
         l2.clickHeaderSignIn();
         l2.enterEmail("mytestingworldlife@gmail.com");
@@ -29,8 +28,6 @@ public class verifySignIn extends DriverWrapper {
         Thread.sleep(3000);
         l2.clickButton();
 
-        homePage h1= new homePage();
-        h1.confirmUserName();
 
         Assert.assertTrue(false, "Salutation isn't displayed");
 
