@@ -65,6 +65,8 @@ public class basePage extends DriverWrapper {
         findWebElement(locator).click();
     }
 
+
+
     public boolean isElementDisplayed(By locator) {
         return findWebElement(locator).isDisplayed();
     }
